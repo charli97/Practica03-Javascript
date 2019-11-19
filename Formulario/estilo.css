@@ -4,12 +4,12 @@ body{
 }
 
 .error {
-    color: red; 
+    color: red;
 }
 
 #datosFormulario {
     background: rgb(230, 228, 169);
-    height: 20rem;
+    height: 31rem;
     width: 40%;
     font: bold 20px Verdana;
     margin-left: 30%;
