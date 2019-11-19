@@ -4,7 +4,11 @@ function validarCamposObligatorios() {
         var elemento = document.forms[0].elements[i]
         if (elemento.value == '' && elemento.type == 'text') {
             if (elemento.id == 'cedula') {
-                document.getElementById('mensajeCedula').innerHTML = '<br>La cedula esta vacia'
+                document.getElementById('mensajeCedula').innerHTML = '<br>Este campo esta vacio.'
+            }else if(elemento.id == 'nombres'){
+                document.getElementById('mensajeNombre').innerHTML = '<br>Este campo esta vacio.'
+            }else if(elemento.id == 'apellidos'){
+                document.getElementById('mensajeApellido').innerHTML = '<br>Este campo esta vacio.'
             }
             elemento.style.border = '1px red solid'
             elemento.className = 'error'
@@ -12,7 +16,7 @@ function validarCamposObligatorios() {
         }
     }
     if (!bandera) {
-        alert('Error: Cedula Incorrecta')
+        alert('Error: Campos Vacios!!')
     }
     return bandera
 }
@@ -22,7 +26,7 @@ function validarLetras(elemento) {
         var miAscii = elemento.value.charCodeAt(elemento.value.length - 1)
         console.log(miAscii)
 
-        if (miAscii >= 97 && miAscii <= 122) {
+        if (miAscii >= 97 && miAscii <= 122 || miAscii >= 65 && miAscii <= 90) {
             return true
         } else {
             elemento.value = elemento.value.substring(0, elemento.value.length - 1)
@@ -47,3 +51,5 @@ function validarNumeros(elemento) {
         return true
     }
 }
+
+

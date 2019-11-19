@@ -3,60 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="validacion_formulario.js"></script>
-    <style type="text/css">
-        .error {
-            color: red;
-            font-size: 8px;
-        }
+    <script type="text/javascript" src="../Formulario/validacion_formulario.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Formulario/estilo.css">
     </style>
 </head>
 
 <body>
-
+    <div id="datosFormulario">
     <form id="formulario01" method="POST" action="" onsubmit="return validarCamposObligatorios()">
         
-        <label for="cedula">Cedula (*)</label>
-        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
+        <label for="cedula">Cedula: </label>
+        <input type="text" id="cedula" name="cedula" value="" placeholder=""
             onkeyup="return validarNumeros(this)" />
         <span id="mensajeCedula" class="error"></span>
         <br>
 
-        <label for="nombres">Nombres (*)</label>
-        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..."
+        <label for="nombres">Nombres: </label>
+        <input type="text" id="nombres" name="nombres" value="" placeholder=""
             onkeyup="return validarLetras(this)" />
+        <span id="mensajeNombre" class="error"></span>
         <br>
 
-        <label for="apellidos">Apelidos (*)</label>
-        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..."
+        <label for="apellidos">Apelidos: </label>
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder=""
             onkeyup="return validarLetras(this)" />
+        <span id="mensajeApellido" class="error"></span>
         <br>
 
-        <label for="direccion">Dirección (*)</label>
-        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..." />
+        <label for="direccion">Dirección: </label>
+        <input type="text" id="direccion" name="direccion" value="" placeholder="" />
+        <span id="mensajeCedula" class="error"></span>
         <br>
 
-        <label for="telefono">Teléfono (*)</label>
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico ..."
+        <label for="telefono">Teléfono: </label>
+        <input type="text" id="telefono" name="telefono" value="" placeholder=""
             onkeyup="return validarNumeros(this)" />
         <br>
 
-        <label for="fecha">Fecha Nacimiento (*)</label>
+        <label for="fecha">Fecha Nacimiento: </label>
         <input type="date" id="fechaNacimiento" name="fechaNacimiento" value=""
-            placeholder="Ingrese su fecha de nacimiento ..." />
+            placeholder="" />
         <br>
 
-        <label for="correo">Correo electrónico (*)</label>
-        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." />
+        <label for="correo">Correo electrónico: </label>
+        <input type="email" id="correo" name="correo" value="" placeholder="" />
         <br>
 
-        <label for="correo">Contraseña (*)</label>
-        <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña ..." />
+        <label for="correo">Contraseña: </label>
+        <input type="password" id="contrasena" name="contrasena" value="" placeholder="" />
         <br>
 
-        <input type="submit" id="crear" name="crear" value="Aceptar" />
+        <input type="submit" id="crear" name="crear" value="Aceptar" style="margin-left: 20%; margin-top: 5%;"/>
         <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
     </form>
+    </div>
 </body>
 
 </html>

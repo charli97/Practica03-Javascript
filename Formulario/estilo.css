@@ -1,0 +1,33 @@
+body{
+    background: rgb(13, 39, 48);
+    overflow-y: auto;
+}
+
+.error {
+    color: red; 
+}
+
+#datosFormulario {
+    background: rgb(230, 228, 169);
+    height: 20rem;
+    width: 40%;
+    font: bold 20px Verdana;
+    margin-left: 30%;
+    margin-top: 13%;
+    float: left;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#datosFormulario form{
+    margin-top: 5%;
+    margin-left: 25%;
+    
+}
+
+
+#datosFormulario input{
+    border-radius: 5px;
+    border: 1px solid #39c;
+    outline: none;
+    background-color: #dfe;
+}
