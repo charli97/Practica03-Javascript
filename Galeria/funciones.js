@@ -1,4 +1,4 @@
-var imagenes = ['../Galeria/imagenes/img1.jpg', '../Galeria/imagenes/img2.jpg', '../Galeria/imagenes/img3.jpg', '../Galeria/imagenes/img4.jpg'],
+var imagenes = ['../Galeria/imagenes/img1.jpg', '../Galeria/imagenes/img2.jpg', '../Galeria/imagenes/img3.jpg', '../Galeria/imagenes/img4.jpg', '../Galeria/imagenes/img5.jpg', '../Galeria/imagenes/img6.jpg', '../Galeria/imagenes/img7.jpg', '../Galeria/imagenes/img8.jpg', '../Galeria/imagenes/img9.jpg', '../Galeria/imagenes/img10.jpg'],
     cont = 0;
 
 function carrusel(contenedor){
@@ -24,8 +24,7 @@ function carrusel(contenedor){
                      
                 }
             }else if(tgt == inicio){
-                img.src = imagenes[Math.round(Math.random()*3)];
-                console.log(img.src);
+                img.src = imagenes[Math.round(Math.random()*10)];
             }
     });
 }
