@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="validacion_formulario.js"></script>
@@ -14,17 +15,21 @@
 <body>
 
     <form id="formulario01" method="POST" action="" onsubmit="return validarCamposObligatorios()">
+        
         <label for="cedula">Cedula (*)</label>
-        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..." />
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula ..."
+            onkeyup="return validarNumeros(this)" />
         <span id="mensajeCedula" class="error"></span>
         <br>
+
         <label for="nombres">Nombres (*)</label>
         <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ..."
             onkeyup="return validarLetras(this)" />
         <br>
 
         <label for="apellidos">Apelidos (*)</label>
-        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..." />
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ..."
+            onkeyup="return validarLetras(this)" />
         <br>
 
         <label for="direccion">Dirección (*)</label>
@@ -32,7 +37,8 @@
         <br>
 
         <label for="telefono">Teléfono (*)</label>
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico ..." />
+        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico ..."
+            onkeyup="return validarNumeros(this)" />
         <br>
 
         <label for="fecha">Fecha Nacimiento (*)</label>
@@ -51,6 +57,6 @@
         <input type="submit" id="crear" name="crear" value="Aceptar" />
         <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
     </form>
-
 </body>
+
 </html>

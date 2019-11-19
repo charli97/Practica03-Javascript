@@ -6,23 +6,38 @@ function validarCamposObligatorios() {
             if (elemento.id == 'cedula') {
                 document.getElementById('mensajeCedula').innerHTML = '<br>La cedula esta vacia'
             }
-
             elemento.style.border = '1px red solid'
             elemento.className = 'error'
             bandera = false
         }
     }
     if (!bandera) {
-        alert('Error: revisar los comentarios')
+        alert('Error: Cedula Incorrecta')
     }
     return bandera
 }
+
 function validarLetras(elemento) {
     if (elemento.value.length > 0) {
         var miAscii = elemento.value.charCodeAt(elemento.value.length - 1)
         console.log(miAscii)
 
         if (miAscii >= 97 && miAscii <= 122) {
+            return true
+        } else {
+            elemento.value = elemento.value.substring(0, elemento.value.length - 1)
+            return false
+        }
+    } else {
+        return true
+    }
+}
+
+function validarNumeros(elemento) {
+    if (elemento.value.length > 0) {
+        var miAscii = elemento.value.charCodeAt(elemento.value.length - 1)
+        console.log(miAscii)
+        if (miAscii >= 48 && miAscii <= 57 && elemento.value.length < 11) {
             return true
         } else {
             elemento.value = elemento.value.substring(0, elemento.value.length - 1)
