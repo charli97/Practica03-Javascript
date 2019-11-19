@@ -1,7 +1,7 @@
 # Practica03-Javascript
 Practica 3: Formulario en JavaScript y Galeria de Imagenes
 1.	Crear un repositorio en GitHub con el nombre “Practica03-Javascript”.
- https://raw.githubusercontent.com/charli97/Practica03-Javascript/tree/master/README/Screenshot_210.png
+ https://github.com/charli97/Practica03-Javascript/tree/master/README/Screenshot_210.png
 2.	Crear una carpeta para la solución de cada ejercicio antes mencionado
  
 3.	Realizar un commit y push por cada requerimiento de los puntos antes descritos. 
