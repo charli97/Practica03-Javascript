@@ -4,7 +4,6 @@ function validarCamposObligatorios() {
     var bandera3 = true
     var bandera4 = true
     var bandera5 = true
-    var bandera6 = true
     for (var i = 0; i < document.forms[0].elements.length; i++) {
         var elemento = document.forms[0].elements[i]
         if (elemento.value == '' && elemento.type == 'text' || elemento.type == '' && elemento.type == 'password') {
@@ -68,28 +67,35 @@ function validarCamposObligatorios() {
             for (var i = 0; i < arrayCorreo.length; i++) {
                 if (arrayCorreo[i] == '@') {
                     aux = i;
-                    console.log(aux)
                 }
             }
-            console.log(aux)
             if (aux != 0 && aux >= 3) {
-                console.log(aux)
                 for (var j = aux; j < arrayCorreo.length; j++) {
                     resultado = resultado + arrayCorreo[j];
                 }
-                console.log(resultado);
-            }else {
-                bandera6 = false;
+            } else {
+                bandera4 = false;
                 elemento.style.border = '3px red solid';
                 elemento.className = 'error';
             }
             if (resultado == '@est.ups.edu.ec' || resultado == '@ups.edu.ec') {
-                
-            }else{
-                console.log(resultado);
-                bandera6 = false;
+
+            } else {
+                bandera4 = false;
                 elemento.style.border = '3px red solid';
                 elemento.className = 'error';
+            }
+        }
+        if(elemento.id == 'contrasena' && elemento.value != ''){
+            var contra = document.getElementById('contrasena').value
+            var arrayContra = contra.split('')
+            console.log(contra.length);
+            if (contra.length <= 7){
+                bandera5 = false
+                elemento.style.border = '3px red solid';
+                elemento.className = 'error';
+            }else {
+                
             }
         }
     }
@@ -104,9 +110,14 @@ function validarCamposObligatorios() {
                 alert('Error: Formato de Fecha Incorrecto!!')
                 bandera = false;
             } else {
-                if (!bandera6) {
+                if (!bandera4) {
                     alert('Correo Incorrecto!!')
                     bandera = false;
+                }else{
+                    if(!bandera5){
+                        alert('Contrasena Incorrecto!!')
+                        bandera = false;
+                    }
                 }
             }
 
@@ -119,8 +130,6 @@ function validarCamposObligatorios() {
 function validarLetras(elemento) {
     if (elemento.value.length > 0) {
         var miAscii = elemento.value.charCodeAt(elemento.value.length - 1)
-        console.log(miAscii)
-
         if (miAscii >= 97 && miAscii <= 122 || miAscii >= 65 && miAscii <= 90 || miAscii == 32) {
             return true
         } else {
@@ -135,7 +144,6 @@ function validarLetras(elemento) {
 function validarNumeros(elemento) {
     if (elemento.value.length > 0) {
         var miAscii = elemento.value.charCodeAt(elemento.value.length - 1)
-        console.log(miAscii)
         if (miAscii >= 48 && miAscii <= 57 && elemento.value.length < 11) {
             return true
         } else {
